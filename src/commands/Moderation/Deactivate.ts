@@ -42,7 +42,7 @@ export default class Command extends BaseCommand {
         { $pull: { jids: M.from } }
       );
       return void M.reply(
-        `📈 *${this.client.util.capitalize(type)}* is now inactive`
+        `📉 *${this.client.util.capitalize(type)}* is now inactive`
       );
     }
     if (type === "chara") {
@@ -54,7 +54,7 @@ export default class Command extends BaseCommand {
         { feature: "chara" },
         { $pull: { jids: M.from } }
       );
-      return void M.reply(`📈 *Chara* is now inactive`);
+      return void M.reply(`📉 *Chara* is now inactive`);
     }
     if (type === "news") {
       await this.client.DB.group.updateOne(
