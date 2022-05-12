@@ -1,37 +1,29 @@
 /** @format */
 
-import { MessageType, Mimetype } from "@adiwajshing/baileys";
-import MessageHandler from "../../Handlers/MessageHandler";
-import BaseCommand from "../../lib/BaseCommand";
-import WAClient from "../../lib/WAClient";
-import { ISimplifiedMessage } from "../../typings";
+import MessageHandler from '../../Handlers/MessageHandler'
+import BaseCommand from '../../lib/BaseCommand'
+import WAClient from '../../lib/WAClient'
+import { ISimplifiedMessage } from '../../typings'
 
 export default class Command extends BaseCommand {
-  constructor(client: WAClient, handler: MessageHandler) {
-    super(client, handler, {
-      command: "hi",
-      description: "Generally used to check if bot is Up",
-      category: "general",
-      usage: `${client.config.prefix}hi`,
-      baseXp: 10,
-    });
-  }
+    constructor(client: WAClient, handler: MessageHandler) {
+        super(client, handler, {
+            command: 'hi',
+            description: "Used for checking if the bot is up or not",
+            category: 'general',
+            usage: `${client.config.prefix}hi`,
+            baseXp: 10
+        })
+    }
 
-  run = async (M: ISimplifiedMessage): Promise<void> => {
-    const buttons = [
-      {
-        buttonId: "help",
-        buttonText: { displayText: `${this.client.config.prefix}help` },
-        type: 1,
-      },
-    ];
+    run = async (M: ISimplifiedMessage): Promise<void> => {
+        if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
+        const user = M.mentioned[0] ? M.mentioned[0] : M.sender.jid
+        let username = user === M.sender.jid ? M.sender.username : 'Your'
+        if (!username) {
 
-    const buttonMessage: any = {
-      contentText: `_*🎊HELLO THERE! CELESTIAL BOT HERE🎊*_`,
-      footerText: "©Celestial 2022",
-      buttons: buttons,
-      headerType: 1,
-    };
-    await M.reply(buttonMessage, MessageType.buttonsMessage);
-  };
+            username = user.split('@')[0]
+        }
+        return void (await M.reply(`Hi ${username} how can i #help?`))
+    }
 }
