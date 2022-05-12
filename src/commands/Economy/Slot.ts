@@ -60,9 +60,9 @@ export default class Command extends BaseCommand {
       "lose",
       "lose",
       "lose",
-      "win",
-      "win",
-      "win",
+      "lose",
+      "lose",
+      "lose",
       "lose",
       "lose",
       "win",
@@ -128,7 +128,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z == "jackpot") {
-      const gold = amount * 10;
+      const gold = amount * 2;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
         { jid: user },
