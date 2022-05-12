@@ -83,22 +83,37 @@ export default class EventHandler {
     const bye = event.action === "remove";
     const promote = event.action === "promote";
     const demote = event.action === "demote";
-    /*const text = add
+    const text = add
 			? `- ${group.subject || "___"} -\n\n💠 *Group Description:*\n${
 					group.desc
 			  }\n\nHope you follow the rules and have fun!\n\n*‣ ${event.participants
 					.map((jid) => `@${jid.split("@")[0]}`)
 					.join(", ")}*`
 			: event.action === "remove"
-			? `Goodbye *@${
+			? `*@${
 					event.participants[0].split("@")[0]
-			  }* 👋🏻, we're probably not gonna miss you.`
+			  }* left the chat`
 			: `Ara Ara looks like *@${
 					event.participants[0].split("@")[0]
 			  }* got ${this.client.util.capitalize(event.action)}d${
 					event.actor ? ` by *@${event.actor.split("@")[0]}*` : ""
-			  }`;*/
+			  }`;
     const contextInfo = {
+            mentionedJid: event.actor ? [...event.participants, event.actor] : event.participants
+        }
+        if (add) {
+            let image = (await this.client.getProfilePicture(event.jid)) || this.client.assets.get('404.png')
+            if (typeof image === 'string') image = await request.buffer(image)
+            if (image)
+                return void (await this.client.sendMessage(event.jid, image, MessageType.image, {
+                    caption: text,
+                    contextInfo
+                }))
+        }
+        return void this.client.sendMessage(event.jid, text, MessageType.extendedText, { contextInfo })
+    }
+}  
+    /*const contextInfo = {
       mentionedJid: event.actor
         ? [...event.participants, event.actor]
         : event.participants,
@@ -189,7 +204,7 @@ export default class EventHandler {
       );
     }
   };
-}
+}*/
 
 interface IEvent {
   jid: string;
