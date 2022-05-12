@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
       return void M.reply(
         `🟨 *${this.client.util.capitalize(
           type
-        )}* is already *activated, Baka!*`
+        )}* is already *active!*`
       );
     if (type === "wild") {
       await this.client.DB.group.updateOne(
@@ -41,7 +41,7 @@ export default class Command extends BaseCommand {
         { feature: "pokemon" },
         { $push: { jids: M.from } }
       );
-      return void M.reply(`🟩 *Wild* is now enabled`);
+      return void M.reply(`📉 *Wild* is now enabled`);
     }
     if (type === "chara") {
       await this.client.DB.group.updateOne(
@@ -52,7 +52,7 @@ export default class Command extends BaseCommand {
         { feature: "chara" },
         { $push: { jids: M.from } }
       );
-      return void M.reply(`🟩 *Chara* is now enabled`);
+      return void M.reply(`📉 *Chara* is now enabled`);
     }
     if (type === "news") {
       await this.client.DB.group.updateOne(
