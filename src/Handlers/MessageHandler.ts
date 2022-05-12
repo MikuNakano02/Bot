@@ -284,7 +284,7 @@ export default class MessageHandler {
       ];
       const buttonMessage: any = {
         contentText: `*A claimable character Appeared!*\n\n*🏷️ Character Details 🏷️*\n\n💠 *Name:* ${chara.name}\n💰 *Price:* ${price}\n📝 *Description:* ${source[0].anime.title}\n\n*[Use ${this.client.config.prefix}claim to have this character in your deck]*`,
-        footerText: "©Celestial 2022",
+        footerText: "© Celestial 2022",
         buttons: buttons,
         headerType: 4,
         imageMessage: media?.message?.imageMessage,
