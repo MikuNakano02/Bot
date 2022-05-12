@@ -83,7 +83,7 @@ export default class EventHandler {
     const bye = event.action === "remove";
     const promote = event.action === "promote";
     const demote = event.action === "demote";
-    const text = add
+    /*const text = add
 			? `- ${group.subject || "___"} -\n\n💠 *Group Description:*\n${
 					group.desc
 			  }\n\nHope you follow the rules and have fun!\n\n*‣ ${event.participants
@@ -112,8 +112,8 @@ export default class EventHandler {
         }
         return void this.client.sendMessage(event.jid, text, MessageType.extendedText, { contextInfo })
     }
-}  
-    /*const contextInfo = {
+}*/  
+    const contextInfo = {
       mentionedJid: event.actor
         ? [...event.participants, event.actor]
         : event.participants,
@@ -204,7 +204,7 @@ export default class EventHandler {
       );
     }
   };
-}*/
+}
 
 interface IEvent {
   jid: string;
