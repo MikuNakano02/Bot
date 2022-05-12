@@ -255,7 +255,7 @@ export default class MessageHandler {
       const chara = await marika.getRandomCharacter();
       const i = await this.client.getBuffer(chara.images.jpg.image_url);
       const source = await marika.getCharacterAnime(chara.mal_id);
-      const price = Math.floor(Math.random() * (50000 - 25000) + 25000);
+      const price = Math.floor(Math.random() * (50000 - 500) + 500);
       await this.client.DB.group.updateMany(
         { jid: data.jids[p] },
         {
@@ -283,7 +283,7 @@ export default class MessageHandler {
         },
       ];
       const buttonMessage: any = {
-        contentText: `*A claimable character Appeared!*\n\n🎀 *Name: ${chara.name}*\n\n💬 *About:* ${chara.about}\n\n📛 *Source: ${source[0].anime.title}*\n\n💰 *Price: ${price}*\n\n*[Use ${this.client.config.prefix}claim to have this character in your gallery]*`,
+        contentText: `*A claimable character Appeared!*\n\n🏷️ Character Details 🏷️*\n\n💠 *Name:* ${chara.name}\n💰 *Price:* ${price}\n📝 *Description:* ${source[0].anime.title}\n\n*[Use ${this.client.config.prefix}claim to have this character in your deck]*`,
         footerText: "©Celestial 2022",
         buttons: buttons,
         headerType: 4,
