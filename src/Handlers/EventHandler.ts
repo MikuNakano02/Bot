@@ -157,16 +157,16 @@ export default class EventHandler {
         .setMemberCount(memberCount)
         .setGuildName(group.subject)
         .setAvatar(pfp)
-        .setColor("border", "#FF0000")
-        .setColor("username-box", "#FF0000")
-        .setColor("discriminator-box", "#FF0000")
-        .setColor("message-box", "#FF0000")
-        .setColor("title", "#FF0000")
-        .setColor("avatar", "#FF0000")
+        .setColor("border", "#3990FA")
+        .setColor("username-box", "#3990FA")
+        .setColor("discriminator-box", "#3990FA")
+        .setColor("message-box", "#3990FA")
+        .setColor("title", "#3990FA")
+        .setColor("avatar", "#3990FA")
         .setText("member-count", `- ${memberCount} member !`)
-        .setText("message", `we're probably not gonna miss you`)
+        .setText("message", `why did you even join then?`)
         .setBackground(
-          "https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+          "https://wallpapercave.com/wp/wp7580800.jpg"
         )
         .toAttachment();
       return void (await this.client.sendMessage(
