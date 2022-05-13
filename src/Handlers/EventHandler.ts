@@ -134,7 +134,7 @@ export default class EventHandler {
         .setText("member-count", `- ${memberCount} member !`)
         .setText("title", "hello")
         .setText("message", `welcome to ${group.subject}`)
-        .setBackground("https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg")
+        .setBackground("https://i.ibb.co/BKcyC2c/celestial-welcm-img.jpg")
         .toAttachment();
       return void (await this.client.sendMessage(
         event.jid,
@@ -174,9 +174,9 @@ export default class EventHandler {
         goodbye.toBuffer(),
         MessageType.image,
         {
-          caption: `Goodbye *@${
+          caption: `*@${
             event.participants[0].split("@")[0]
-          }* 👋🏻, we're probably not gonna miss you.`,
+          }* left the chat`,
           contextInfo,
         }
       ));
