@@ -255,7 +255,7 @@ export default class MessageHandler {
       const chara = await marika.getRandomCharacter();
       const i = await this.client.getBuffer(chara.images.jpg.image_url);
       const source = await marika.getCharacterAnime(chara.mal_id);
-      const price = Math.floor(Math.random() * (15000 - 500) + 500);
+      const price = Math.floor(Math.random() * (11000 - 500) + 500);
       await this.client.DB.group.updateMany(
         { jid: data.jids[p] },
         {
