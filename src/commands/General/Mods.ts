@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
     let text = "🌀 Celestial Mods 🌀\n\n";
     filteredMap.forEach(
       (user, index) =>
-        (text += `❯ "@"${user?.jid?.split("@")[0]}*\n`)
+        (text += `❯ @${user?.jid?.split("@")[0]}\n`)
     );
     text += `\n © Celestial 2022`;
     return void M.reply(text,undefined, undefined,
