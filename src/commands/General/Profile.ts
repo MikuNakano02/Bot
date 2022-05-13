@@ -37,7 +37,7 @@ export default class Command extends BaseCommand {
       pfp = await this.client.getProfilePicture(user);
     } catch (err) {
       M.reply(`Profile Picture not Accessible of ${username}`);
-      pfp = "https://wallpaperaccess.com/full/5304840.png";
+      pfp = "http://telegra.ph/file/802036ce9d0598d615787.jpg";
     }
     const exp = (await this.client.getUser(user)).Xp;
     let role: string;
