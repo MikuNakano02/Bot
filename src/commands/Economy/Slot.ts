@@ -31,7 +31,7 @@ export default class Command extends BaseCommand {
     if (time - (Date.now() - cd) > 0) {
       const timeLeft = ms(time - (Date.now() - cd));
       return void M.reply(
-        `Woahh! Slow down. You can bet again in *${timeLeft.seconds} second(s)*`
+        `Woahh! Slow down. You can bet again in *${timeLeft.seconds} seconds*`
       );
     }
     const emojis = [
@@ -69,7 +69,7 @@ export default class Command extends BaseCommand {
       "lose",
       "lose",
       "lose",
-      "lose",
+      "win",
       "lose",
       "lose",
       "lose",
@@ -89,7 +89,7 @@ export default class Command extends BaseCommand {
       "lose",
       "lose",
       "lose",
-      "lose",
+      "win",
       "lose",
       "lose",
       "jackpot",
@@ -154,7 +154,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z == "jackpot") {
-      const gold = amount * 5;
+      const gold = amount * 10;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
         { jid: user },
