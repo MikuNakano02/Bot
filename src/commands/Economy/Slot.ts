@@ -154,7 +154,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z == "jackpot") {
-      const gold = amount * 2;
+      const gold = amount * 5;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
         { jid: user },
