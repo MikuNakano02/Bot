@@ -25,7 +25,6 @@ export default class Command extends BaseCommand {
       (user, index) =>
         (text += `❯ *@${user?.jid?.split("@")[0]}*\n`)
     );
-    text += `\n © Celestial 2022`;
     return void M.reply(text,undefined, undefined,
                        filteredMap.map(user => user.jid))
   };
