@@ -33,7 +33,7 @@ export default class Command extends BaseCommand {
     if (time - (Date.now() - cd) > 0) {
       const timeLeft = ms(time - (Date.now() - cd));
       return void M.reply(
-        `Woahh! Slow down, you can gamble again in *${timeLeft.seconds} second(s)*`
+        `Woahh! Slow down, you can gamble again in *${timeLeft.seconds} seconds*`
       );
     }
     const directions = ["left", "right"];
