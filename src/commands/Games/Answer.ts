@@ -35,7 +35,6 @@ export default class Command extends BaseCommand {
     const id = await (await this.client.getGroupData(M.from)).quizResponse.id;
     const check = await (await this.client.getUser(M.sender.jid)).lastQuizId;
     const exp = Math.floor(Math.random() * 100);
-    const gold = Math.floor(Math.random() * 999);
     if (id === check) {
       return void M.reply(
         `You have recently attempted to answer this question, give it a break.`
@@ -54,9 +53,8 @@ export default class Command extends BaseCommand {
         { $inc: { quizPoints: 1 } }
       );
       await this.client.setXp(M.sender.jid, exp, 40);
-      await this.client.addGold(M.sender.jid, gold, 80);
       return void M.reply(
-        `🎉 Correct answer. You have earned *${exp} xp and ${gold} gold*.`
+        `🎉 Correct answer. You have earned *${exp} XP*.`
       );
     } else if (ans !== correctAns) {
       await this.client.DB.user.updateOne(
