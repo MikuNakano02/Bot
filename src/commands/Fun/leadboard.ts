@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
     //   M.reply(JSON.stringify(lb));
 
     // M.reply('total user heuhue :'+indexes.toString())
-    const message = ["_*Celestial Leaderboard*_ :" + indexes.toString() + ""];
+    const message = ["*👑CELESTIAL GLOBAL LEADERBOARD👑*\nUsers :" + indexes.toString() + ""];
     const mention = [];
     let i = 0;
     for (const users of lb) {
