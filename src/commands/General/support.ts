@@ -19,12 +19,12 @@ export default class Command extends BaseCommand {
   run = async (M: ISimplifiedMessage): Promise<void> => {
     await this.client.sendMessage(
       M.sender.jid,
-      ` *Celestial*\nWell, In that case...\n\n
+      `*Celestial*\nWell, In that case...\n\n
 *🌀 Groups:*\n\n
-*🧧 Title:『CELESTIAL: NEWS』*\n*💌 Invite:\n*https://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
-*🧧 Title:『CELESTIAL: MAIN』*\n*💌 Invite:\n*https://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
-*🧧 Title:『CELESTIAL: CASINO』*\n*💌 Invite:\n*https://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
-*🧧 Title:『CELESTIAL: QUIZ』*\n*💌 Invite:\n*https://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
+*🧧 Title:『CELESTIAL: NEWS』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
+*🧧 Title:『CELESTIAL: MAIN』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
+*🧧 Title:『CELESTIAL: CASINO』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
+*🧧 Title:『CELESTIAL: QUIZ』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
 
       MessageType.text
     );
