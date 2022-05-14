@@ -46,7 +46,7 @@ export default class Command extends BaseCommand {
         ? this.client.contacts[users.jid].short
         : `@${users.jid.split("@")[0]}`;
 
-      const text = `*#${i}*\n*♦️Username* : *${username}*\n*🎊 Role: ${role}*\n*🏦 Bank*: *${users.bank}*\n*🪙 Gold* : *${users.wallet}*\n♦️ *Pokemons: ${users.pokemons.length}*\n🎗 *Characters: ${users.gallery.length}*\n 🍀 *Quiz Points: ${users.quizPoints}*\n`;
+      const text = `*#${i}*\n*🧧Username* : *${username}*\n*🎖️ Rank: ${users.role}*\n*🏦 Bank*: *${users.bank}*\n*🪙 Gold* : *${users.wallet}*\n💻 *Pokemons: ${users.pokemons.length}*\n⭐ *Characters: ${users.gallery.length}*\n📊 *Quiz Points: ${users.quizPoints}*\n`;
       message.push(text);
     }
     console.log(message);
