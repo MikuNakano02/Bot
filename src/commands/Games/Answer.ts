@@ -56,7 +56,7 @@ export default class Command extends BaseCommand {
       await this.client.setXp(M.sender.jid, exp, 40);
       await this.client.addGold(M.sender.jid, gold);
       return void M.reply(
-        `🎉 Correct answer. You have earned *${exp} XP* and *${gold} Gold.`
+        `🎉 Correct answer. You have earned *${exp} XP* and *${gold} Gold.*`
       );
     } else if (ans !== correctAns) {
       await this.client.DB.user.updateOne(
