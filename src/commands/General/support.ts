@@ -21,10 +21,10 @@ export default class Command extends BaseCommand {
       M.sender.jid,
       `*Celestial*\nWell, In that case...\n\n
 *🌀 Groups:*\n\n
-*🧧 Title:『CELESTIAL: NEWS』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
-*🧧 Title:『CELESTIAL: MAIN』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
-*🧧 Title:『CELESTIAL: CASINO』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
-*🧧 Title:『CELESTIAL: QUIZ』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
+*🧧 Title:『Celestial: News』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
+*🧧 Title:『Celestial: Main』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
+*🧧 Title:『Celestial: Casino』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
+*🧧 Title:『Celestial: Quiz』*\n*💌 Invite:*\nhttps://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
 
       MessageType.text
     );
