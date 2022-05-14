@@ -26,6 +26,9 @@ const UserSchema = new Schema({
     required: true,
     default: 0,
   },
+  Role: {
+    type: String
+  },
   bank: {
     type: Number,
     required: true,
