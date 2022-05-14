@@ -130,7 +130,7 @@ export default class Command extends BaseCommand {
       .setAvatar(pfp)
       .setCurrentXP(exp || 0)
       .setRequiredXP(required)
-      .setStatus("online", false)
+      .setStatus("online", true)
       .setLevel(level, "Level:", true)
       .setRank(0, `Role: ${role}`, true)
       .setProgressBar("#FFC0CB", "COLOR")
@@ -139,9 +139,9 @@ export default class Command extends BaseCommand {
       .setDiscriminator("0007")
       .setBackground("COLOR", "#FFC0CB");
     rank.build({}).then((rankcard) => {
-      const text = `🏮 *Username: ${username}*\n\n〽️ *Level: ${level}*\n\n⭐ *Exp: ${
+      const text = `🧧 *Username: ${username}*\n🎖️ *Level: ${level}*\n✴️ *Exp: ${
         exp || 0
-      } / ${required}*\n\n💫 *Role: ${role}*\n\n`;
+      } / ${required}*\n💠 *Role: ${role}*\n`;
       M.reply(
         rankcard,
         MessageType.image,
