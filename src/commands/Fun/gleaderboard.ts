@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
     //   M.reply(JSON.stringify(lb));
 
     // M.reply('total user heuhue :'+indexes.toString())
-    let message = ["*🪙 GOLD LEADERBOARD 🪙* :" + indexes.toString() + ""];
+    let message = ["*🪙 GOLD LEADERBOARD 🪙*\nUsers :" + indexes.toString() + ""];
     let mention = [];
     let i = 0;
     for (const users of lb) {
@@ -46,7 +46,7 @@ export default class Command extends BaseCommand {
         ? this.client.contacts[users.jid].short
         : `@${users.jid.split("@")[0]}`;
 
-      let text = `_*Celestial Leaderboard*_\n *#${i}*\n*🧧 Username* : ${username}\n*🎖️ Exp*: ${users.Xp}\n*🏦 Bank* : ${users.bank}\n*🪙 Gold* : ${users.wallet}\n`;
+      let text = `*#${i}*\n*🧧 Username* : ${username}\n*🎖️ Exp*: ${users.Xp}\n*🏦 Bank* : ${users.bank}\n*🪙 Gold* : ${users.wallet}\n`;
       message.push(text);
     }
     console.log(message);
