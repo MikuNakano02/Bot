@@ -21,9 +21,6 @@ const UserSchema = new Schema({
     required: true,
     default: 0,
   },
-  role: {
-    type: String
-  },
   wallet: {
     type: Number,
     required: true,
