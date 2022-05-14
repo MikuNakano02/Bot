@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
     ];
 
     const buttonMessage: any = {
-      contentText: `_*----🎀[Rules]🎀----*_\n\n*DONT ASK FOR THE SCRIPT*❌\n• Use *!support* to get the Official group links in your dm\n• If you want to add Celestial Bots in your group then contact the mods by using *#mods* \n*--->* Dont use wrong command, use the command given in the *help list* \n• Dont spam the bot with commands if the bot is not responding, it means the bot maybe offline or facing internet issues \n• Dont Dm/Call the bot \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫_ `,
+      contentText: `_*----🎀[Rules]🎀----*_\n\n*DONT ASK FOR THE SCRIPT*❌\n• Use *!support* to get the Official group links in your dm\n• If you want to add Celestial Bots in your group then contact the mods by using *#mods* \n• Dont use wrong command, use the command given in the *help list* \n• Dont spam the bot with commands if the bot is not responding, it means the bot maybe offline or facing internet issues \n• Dont Dm/Call the bot \n\n_*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫_ `,
       footerText: "© Celestial 2022",
       buttons: buttons,
       headerType: 1,
