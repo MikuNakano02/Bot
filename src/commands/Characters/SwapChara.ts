@@ -8,6 +8,7 @@ export default class Command extends BaseCommand {
     super(client, handler, {
       command: "schara",
       description: `Swaps the index number of characters in your deck.`,
+      aliases: ["sc"],
       category: "characters",
       usage: `${client.config.prefix}schara [character_index_number_in_your_deck] [character_index_number_in_your_deck]`,
       baseXp: 0,
