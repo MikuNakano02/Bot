@@ -20,10 +20,10 @@ export default class Command extends BaseCommand {
     await this.client.sendMessage(
       M.sender.jid,
       ` *I'M FROM CELESTIAL*\n\n
-⭐*CELESTIAL NEWS*:https://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
-⭐*CELESTIAL*:https://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
-⭐*CELESTIAL CASINO*:https://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
-⭐*CELESTIAL QUIZ*:https://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
+*📰CELESTIAL『NEWS』*:https://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
+*🌀CELESTIAL『MAIN』*:https://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
+*🎲CELESTIAL『CASINO』*:https://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
+*📊CELESTIAL『QUIZ』*:https://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
 
       MessageType.text
     );
