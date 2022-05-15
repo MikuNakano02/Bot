@@ -63,19 +63,13 @@ export default class Command extends BaseCommand {
       "win",
       "lose",
       "lose",
-      "lose",
+      "win",
       "lose",
       "win",
       "lose",
       "lose",
       "lose",
       "win",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "win",
-      "lose",
       "lose",
       "lose",
       "win",
@@ -84,7 +78,13 @@ export default class Command extends BaseCommand {
       "lose",
       "lose",
       "lose",
+      "win",
       "lose",
+      "win",
+      "lose",
+      "win",
+      "lose",
+      "win",
       "lose",
       "lose",
       "win",
@@ -137,7 +137,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z === "win") {
-      const i = Math.floor(Math.random() * 5);
+      const i = Math.floor(Math.random() * 6);
       const gold = amount * i;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
@@ -154,7 +154,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z == "jackpot") {
-      const gold = amount * 10;
+      const gold = amount * 12;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
         { jid: user },
