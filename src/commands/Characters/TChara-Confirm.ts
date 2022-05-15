@@ -107,10 +107,8 @@ export default class Command extends BaseCommand {
         { $set: { "charaTrade.ongoing": false } }
       );
       return void M.reply(
-        `Trade Completed! ${data.for.name} (From ${data.for.source}) -----> @${
-          data.startedBy.split("@")[0]
-        }\n${data.offer.name} (From ${data.offer.source}) -----> @${
-          user.split("@")[0]
+        `*🎊 Trade Complete*\n\n🎗️ @${data.startedBy.split("@")[0] <=${data.for.name} - (From ${data.for.source})
+        }\n🎗️ @${user.split("@")[0] <=${data.offer.name} - (From ${data.offer.source})
         }`,
         MessageType.text,
         undefined,
