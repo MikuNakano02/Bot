@@ -1,5 +1,5 @@
 {
-  "name": "Chitoge",
+  "name": "Celestial",
   "description": "A WhatsApp Bot With Rich Anime Features. ",
   "keywords": [
       "bot",
@@ -13,7 +13,7 @@
   ],
   "website": "https://github.com/ShinNouzen/Chitoge#readme",
   "repository": "https://github.com/ShinNouzen/Chitoge.git",
-  "logo": "https://wallpapermemory.com/uploads/711/chitoge-kirisaki-wallpaper-full-hd-323316.jpg",
+  "logo": "telegra.ph/file/b9b01b6ccd2cf12462eb1.jpg",
   "success_url": "/",
   "env": {
       "PREFIX": {
