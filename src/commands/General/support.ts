@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
 *🌀 Groups:*\n
 *🧧 Title:『Celestial: News』*\n*💌 Invite:* \nhttps://chat.whatsapp.com/DmsXJlgwaF9KncMAwEtRJP\n\n 
 *🧧 Title:『Celestial: Main』*\n*💌 Invite:* \nhttps://chat.whatsapp.com/IZYFwOGf7I12x0zFUDukSY\n\n
-*🧧 Title:『Celestial: Casino』*\n*💌 Invite: *\nhttps://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
+*🧧 Title:『Celestial: Casino』*\n*💌 Invite:* \nhttps://chat.whatsapp.com/IUIAiDPgKCp4LabWiOf7HE\n\n 
 *🧧 Title:『Celestial: Quiz』*\n*💌 Invite:* \nhttps://chat.whatsapp.com/Fp0lBMx8kKvA5yRJQkt0k9`,
 
       MessageType.text
