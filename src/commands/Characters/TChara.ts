@@ -64,7 +64,7 @@ export default class Command extends BaseCommand {
         type: 1,
       },
     ];
-    const text = `🧧 Character Trade Created 🧧\n\n🔰 Offer: ${gallery[i].name} (From ${gallery[i].source})\n♦️ For: ${chara.name} (From ${source[0].anime.title})`;
+    const text = `*🧧 Character Trade Created 🧧*\n\n*🔰 Offer: ${gallery[i].name} (From ${gallery[i].source})*\n*♦️ For: ${chara.name} (From ${source[0].anime.title})*`;
     const buttonMessage: any = {
       contentText: `${text}`,
       footerText: "© Celestial 2022",
