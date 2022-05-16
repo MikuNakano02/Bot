@@ -50,7 +50,7 @@ export default class Command extends BaseCommand {
 𝘛𝘩𝘦 𝘶𝘴𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘣𝘦𝘭𝘰𝘸.
 
 *━━━≪•◦𝘊𝘩𝘢𝘳𝘢𝘤𝘵𝘦𝘳𝘴◦•≫━━━*
- 𝘤𝘭𝘢𝘪𝘮, 𝘥𝘦𝘤𝘬, 𝘴𝘤𝘩𝘢𝘳𝘢, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘤𝘩𝘢𝘳𝘢
+ 𝘤𝘭𝘢𝘪𝘮, 𝘊𝘰𝘭𝘭𝘦𝘤𝘵𝘪𝘰𝘯, 𝘴𝘤𝘩𝘢𝘳𝘢, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘤𝘩𝘢𝘳𝘢
 
 *━━━≪•◦𝘊𝘰𝘥𝘪𝘯𝘨◦•≫━━━*
  𝘨𝘪𝘵𝘩𝘶𝘣
@@ -74,7 +74,7 @@ export default class Command extends BaseCommand {
  𝘢𝘤𝘵𝘪𝘷𝘢𝘵𝘦, 𝘢𝘥𝘥, 𝘤𝘭𝘰𝘴𝘦, 𝘥𝘦𝘢𝘤𝘵𝘪𝘷𝘢𝘵𝘦, 𝘥𝘦𝘭𝘦𝘵𝘦, 𝘥𝘦𝘮𝘰𝘵𝘦, 𝘦𝘷𝘦𝘳𝘺𝘰𝘯𝘦, 𝘨𝘳𝘰𝘶𝘱𝘤𝘩𝘢𝘯𝘨𝘦, 𝘰𝘱𝘦𝘯, 𝘱𝘳𝘰𝘮𝘰𝘵𝘦, 𝘱𝘶𝘳𝘨𝘦, 𝘳𝘦𝘮𝘰𝘷𝘦, 𝘳𝘦𝘷𝘰𝘬𝘦
 
 *━━━≪•◦𝘗𝘰𝘬𝘦𝘮𝘰𝘯◦•≫━━━*
- 𝘤𝘢𝘵𝘤𝘩, 𝘱𝘢𝘳𝘵𝘺, 𝘱𝘤, 𝘱𝘰𝘬𝘦𝘮𝘰𝘯𝘴, 𝘴𝘸𝘢𝘱, 𝘵2𝘱𝘢𝘳𝘵𝘺, 𝘵2𝘱𝘤, 𝘵𝘳𝘢𝘥𝘦-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘳𝘢𝘥𝘦-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘳𝘢𝘥𝘦
+ 𝘤𝘢𝘵𝘤𝘩, 𝘱𝘢𝘳𝘵𝘺, 𝘱𝘤, 𝘗𝘰𝘬𝘦𝘥𝘦𝘹, 𝘴𝘸𝘢𝘱, 𝘵2𝘱𝘢𝘳𝘵𝘺, 𝘵2𝘱𝘤, 𝘵𝘳𝘢𝘥𝘦-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘳𝘢𝘥𝘦-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘳𝘢𝘥𝘦
 
 *━━━≪•◦𝘜𝘵𝘪𝘭𝘴◦•≫━━━*
  𝘣𝘭𝘶𝘳, 𝘤𝘪𝘳𝘤𝘭𝘦, 𝘨𝘦𝘵𝘨𝘪𝘧, 𝘨𝘰𝘰𝘨𝘭𝘦, 𝘳𝘦𝘵𝘳𝘪𝘦𝘷𝘦, 𝘴𝘤𝘳𝘦𝘦𝘯𝘴𝘩𝘰𝘵, 𝘴𝘵𝘦𝘢𝘭, 𝘴𝘵𝘪𝘤𝘬𝘦𝘳, 𝘴𝘶𝘣𝘳𝘦𝘥, 𝘵𝘳𝘢𝘯𝘴𝘭𝘢𝘵𝘦, 𝘸𝘪𝘬𝘪𝘱𝘦𝘥𝘪𝘢, 𝘱𝘱𝘤𝘰𝘶𝘱𝘭𝘦
@@ -185,7 +185,7 @@ export default class Command extends BaseCommand {
         { title: "catch", rowId: "rowid1" },
         { title: "party", rowId: "rowid2" },
         { title: "pc", rowId: "rowid2" },
-        { title: "pokemons", rowId: "rowid2" },
+        { title: "pokedex", rowId: "rowid2" },
         { title: "t2party", rowId: "rowid2" },
         { title: "t2pc", rowId: "rowid2" },
         { title: "trade", rowId: "rowid2" },
@@ -195,7 +195,7 @@ export default class Command extends BaseCommand {
       ];
       const characters = [
         { title: "claim", rowId: "rowid1" },
-        { title: "gallery", rowId: "rowid2" },
+        { title: "collection", rowId: "rowid2" },
         { title: "schara", rowId: "rowid2" },
       ];
       const utils = [
