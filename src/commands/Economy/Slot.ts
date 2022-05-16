@@ -130,14 +130,14 @@ export default class Command extends BaseCommand {
       const text = `${head}\n\n${i}\n\n📉 You lost *${amount} gold*.`;
       const buttonMessage: any = {
         contentText: `${text}`,
-        footerText: "©Celestial 2022",
+        footerText: "© Celestial 2022",
         buttons: buttons,
         headerType: 1,
       };
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z === "win") {
-      const i = Math.floor(Math.random() * 4);
+      const i = Math.floor(Math.random() * 5);
       const gold = amount * i;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
