@@ -7,7 +7,7 @@ export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
       command: "schara",
-      description: `Swaps the index number of characters in your deck.`,
+      description: `Swaps the index number of characters in your collec.`,
       aliases: ["sc"],
       category: "characters",
       usage: `${client.config.prefix}schara [character_index_number_in_your_deck] [character_index_number_in_your_deck]`,
