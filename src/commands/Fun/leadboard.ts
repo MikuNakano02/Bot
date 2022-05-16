@@ -44,7 +44,7 @@ run = async (M: ISimplifiedMessage): Promise<void> => {
         ? this.client.contacts[users.jid].name
         : this.client.contacts[users.jid]
         ? this.client.contacts[users.jid].short
-        : `${users.jid.split[0]}`;
+        : `${users.jid.split("@")[0]}`;
 
       const text = `*#${i}*\n*🧧 Username* : *${username}*\n*👛 Wallet* : *${users.wallet}*\n*🏦 Bank*: *${users.bank}*\n*🎖️ Exp*: *${users.Xp}*\n💻 *Pokemons: ${users.pokemons.length}*\n⭐ *Characters: ${users.gallery.length}*\n📊 *Quiz Points: ${users.quizPoints}*\n`;
       message.push(text);
