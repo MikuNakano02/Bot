@@ -29,6 +29,7 @@ export default class Command extends BaseCommand {
 
     // M.reply('total user heuhue :'+indexes.toString())
     const message = ["*👑CELESTIAL GLOBAL LEADERBOARD👑*\nUsers :" + indexes.toString() + ""];
+    let mention = [];
     let i = 0;
     for (const users of lb) {
       console.log(users.jid, "number");
@@ -53,6 +54,7 @@ export default class Command extends BaseCommand {
       await request.buffer("https://www.linkpicture.com/q/wp3470722-space-wallpaper-hd-purple-01.jpeg"),
       MessageType.image,
       undefined,
+      mention,
       message.join("\n\n")
     );
   };
