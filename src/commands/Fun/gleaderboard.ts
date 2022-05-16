@@ -32,7 +32,6 @@ export default class Command extends BaseCommand {
     let mention = [];
     let i = 0;
     for (const users of lb) {
-      console.log(users.jid, "number");
       mention.push(users.jid);
       i++;
       console.log(i);
