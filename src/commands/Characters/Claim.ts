@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
     if (time - (Date.now() - cd) > 0) {
       const timeLeft = ms(time - (Date.now() - cd));
       return void M.reply(
-        `Woahh! Slow down, you can use this command again in *${timeLeft.seconds} second(s)*`
+        `Woahh! Slow down, you can use this command again in *${timeLeft.seconds} seconds*`
       );
     }
     const data = await (await this.client.getGroupData(M.from)).charaResponse;
@@ -56,7 +56,7 @@ export default class Command extends BaseCommand {
       { $set: { "charaResponse.claimable": false } }
     );
     return void M.reply(
-      `🎉 You have successfully claimed *${data.name}* from *${data.source}* It has been stored in your deck.`
+      `🎉 You have successfully claimed *${data.name}* from *${data.source}* It has been stored in your collection.`
     );
   };
 }
