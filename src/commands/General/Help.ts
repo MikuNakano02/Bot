@@ -44,18 +44,49 @@ export default class Command extends BaseCommand {
           categories[info.config.category].push(info);
         }
       }
-      let text = `🌀 Konichiwa! *@${
-        user.split("@")[0]
-      }*, I'm *${this.client.user.name}*.\n\nMy prefix is - "${
-        this.client.config.prefix
-      }"\n\nThe usable commands are listed below.\n\n`;
-      const keys = Object.keys(categories);
-      for (const key of keys)
-        text += `*━━━≪•◦${this.client.util.capitalize(
-          key
-        )}◦•≫━━━*\n \`\`\`${categories[key]
-          .map((command) => command.config?.command)
-          .join(", ")}\`\`\`\n\n`;
+      let text =` *🌀Konichiwa!* @${user.split("@")[0]
+      }*, I'm *${this.client.user.name}*.\n\n𝘔𝘺 𝘱𝘳𝘦𝘧𝘪𝘹 𝘪𝘴 {this.client.config.prefix}
+
+𝘛𝘩𝘦 𝘶𝘴𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘣𝘦𝘭𝘰𝘸.
+
+*━━━≪•◦𝘊𝘩𝘢𝘳𝘢𝘤𝘵𝘦𝘳𝘴◦•≫━━━*
+ 𝘤𝘭𝘢𝘪𝘮, 𝘥𝘦𝘤𝘬, 𝘴𝘤𝘩𝘢𝘳𝘢, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘤𝘩𝘢𝘳𝘢-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘤𝘩𝘢𝘳𝘢
+
+*━━━≪•◦𝘊𝘰𝘥𝘪𝘯𝘨◦•≫━━━*
+ 𝘨𝘪𝘵𝘩𝘶𝘣
+
+*━━━≪•◦𝘌𝘤𝘰𝘯𝘰𝘮𝘺◦•≫━━━*
+ 𝘣𝘢𝘯𝘬, 𝘥𝘢𝘪𝘭𝘺, 𝘥𝘦𝘱𝘰𝘴𝘪𝘵, 𝘨𝘢𝘮𝘣𝘭𝘦, 𝘨𝘪𝘷𝘦, 𝘳𝘰𝘣, 𝘴𝘭𝘰𝘵, 𝘸𝘢𝘭𝘭𝘦𝘵, 𝘸𝘪𝘵𝘩𝘥𝘳𝘢𝘸
+
+*━━━≪•◦𝘌𝘥𝘶𝘤𝘢𝘵𝘪𝘷𝘦◦•≫━━━*
+ 𝘤𝘢𝘭𝘤𝘶𝘭𝘢𝘵𝘰𝘳, 𝘤𝘳𝘺𝘱𝘵𝘰, 𝘦𝘭𝘦𝘮𝘦𝘯𝘵, 𝘵𝘳𝘪𝘷𝘪𝘢, 𝘶𝘳𝘣𝘢𝘯𝘥𝘪𝘤𝘵𝘪𝘰𝘯𝘢𝘳𝘺, 𝘸𝘦𝘢𝘵𝘩𝘦𝘳
+
+*━━━≪•◦𝘍𝘶𝘯◦•≫━━━*
+ 𝘧𝘢𝘤𝘵, 𝘫𝘢𝘪𝘭, 𝘫𝘰𝘬𝘦, 𝘲𝘶𝘰𝘵𝘦, 𝘳𝘪𝘱, 𝘳𝘦𝘢𝘤𝘵, 𝘴𝘩𝘪𝘱, 𝘵𝘳𝘢𝘴𝘩, 𝘵𝘳𝘪𝘨𝘨𝘦𝘳, 𝘸𝘢𝘯𝘵𝘦𝘥, 𝘸𝘩𝘺, 𝘨𝘭𝘦𝘢𝘥𝘦𝘳𝘣𝘰𝘢𝘳𝘥, 𝘤𝘩𝘢𝘵
+
+*━━━≪•◦𝘎𝘢𝘮𝘦𝘴◦•≫━━━*
+ 𝘢𝘯𝘴𝘸𝘦𝘳, 𝘲𝘶𝘪𝘻
+
+*━━━≪•◦𝘎𝘦𝘯𝘦𝘳𝘢𝘭◦•≫━━━*
+ 𝘢𝘥𝘮𝘪𝘯𝘴, 𝘦𝘹𝘱, 𝘩𝘦𝘭𝘱, 𝘩𝘪, 𝘪𝘯𝘷𝘪𝘵𝘦𝘭𝘪𝘯𝘬, 𝘮𝘰𝘥𝘴, 𝘱𝘳𝘰𝘧𝘪𝘭𝘦, 𝘳𝘢𝘯𝘬, 𝘳𝘶𝘭𝘦𝘴, 𝘴𝘶𝘱𝘱𝘰𝘳𝘵
+
+*━━━≪•◦𝘔𝘰𝘥𝘦𝘳𝘢𝘵𝘪𝘰𝘯◦•≫━━━*
+ 𝘢𝘤𝘵𝘪𝘷𝘢𝘵𝘦, 𝘢𝘥𝘥, 𝘤𝘭𝘰𝘴𝘦, 𝘥𝘦𝘢𝘤𝘵𝘪𝘷𝘢𝘵𝘦, 𝘥𝘦𝘭𝘦𝘵𝘦, 𝘥𝘦𝘮𝘰𝘵𝘦, 𝘦𝘷𝘦𝘳𝘺𝘰𝘯𝘦, 𝘨𝘳𝘰𝘶𝘱𝘤𝘩𝘢𝘯𝘨𝘦, 𝘰𝘱𝘦𝘯, 𝘱𝘳𝘰𝘮𝘰𝘵𝘦, 𝘱𝘶𝘳𝘨𝘦, 𝘳𝘦𝘮𝘰𝘷𝘦, 𝘳𝘦𝘷𝘰𝘬𝘦
+
+*━━━≪•◦𝘗𝘰𝘬𝘦𝘮𝘰𝘯◦•≫━━━*
+ 𝘤𝘢𝘵𝘤𝘩, 𝘱𝘢𝘳𝘵𝘺, 𝘱𝘤, 𝘱𝘰𝘬𝘦𝘮𝘰𝘯𝘴, 𝘴𝘸𝘢𝘱, 𝘵2𝘱𝘢𝘳𝘵𝘺, 𝘵2𝘱𝘤, 𝘵𝘳𝘢𝘥𝘦-𝘤𝘰𝘯𝘧𝘪𝘳𝘮, 𝘵𝘳𝘢𝘥𝘦-𝘥𝘦𝘭𝘦𝘵𝘦, 𝘵𝘳𝘢𝘥𝘦
+
+*━━━≪•◦𝘜𝘵𝘪𝘭𝘴◦•≫━━━*
+ 𝘣𝘭𝘶𝘳, 𝘤𝘪𝘳𝘤𝘭𝘦, 𝘨𝘦𝘵𝘨𝘪𝘧, 𝘨𝘰𝘰𝘨𝘭𝘦, 𝘳𝘦𝘵𝘳𝘪𝘦𝘷𝘦, 𝘴𝘤𝘳𝘦𝘦𝘯𝘴𝘩𝘰𝘵, 𝘴𝘵𝘦𝘢𝘭, 𝘴𝘵𝘪𝘤𝘬𝘦𝘳, 𝘴𝘶𝘣𝘳𝘦𝘥, 𝘵𝘳𝘢𝘯𝘴𝘭𝘢𝘵𝘦, 𝘸𝘪𝘬𝘪𝘱𝘦𝘥𝘪𝘢, 𝘱𝘱𝘤𝘰𝘶𝘱𝘭𝘦
+
+*━━━≪•◦𝘞𝘦𝘦𝘣◦•≫━━━*
+ 𝘢𝘯𝘪𝘮𝘦, 𝘢𝘯𝘪𝘮𝘦𝘲𝘶𝘰𝘵𝘦, 𝘢𝘯𝘪𝘮𝘦𝘮𝘦, 𝘤𝘩𝘢𝘳𝘢𝘤𝘵𝘦𝘳, 𝘤𝘩𝘢𝘳𝘢𝘤𝘵𝘦𝘳𝘪𝘥, 𝘥𝘪𝘷𝘰𝘳𝘤𝘦, 𝘨𝘦𝘯𝘴𝘩𝘪𝘯𝘤𝘩𝘢𝘳𝘢𝘤𝘵𝘦𝘳, 𝘩𝘢𝘪𝘨𝘶𝘴𝘩𝘢, 𝘬𝘪𝘵𝘴𝘶𝘯𝘦, 𝘭𝘰𝘭𝘪, 𝘮𝘢𝘯𝘨𝘢, 𝘮𝘢𝘳𝘳𝘺, 𝘯𝘦𝘬𝘰, 𝘱𝘰𝘬𝘦𝘮𝘰𝘯, 𝘳𝘱𝘢𝘱𝘦𝘳, 𝘴𝘢𝘶𝘤𝘦, 𝘷𝘵𝘶𝘣𝘦𝘳, 𝘸𝘢𝘪𝘧𝘶, 𝘸𝘢𝘭𝘭𝘱𝘢𝘱𝘦𝘳
+
+*━━━≪•◦𝘔𝘶𝘴𝘪𝘤◦•≫━━━*
+ 𝘭𝘺𝘳𝘪𝘤𝘴, 𝘥𝘰𝘸𝘯𝘭𝘰𝘢𝘥, 𝘴𝘱𝘰𝘵𝘪𝘧𝘺
+
+*━━━≪•◦𝘠𝘰𝘶𝘵𝘶𝘣𝘦◦•≫━━━*
+ 𝘺𝘵𝘢𝘶𝘥𝘪𝘰, 𝘺𝘵𝘴𝘦𝘢𝘳𝘤𝘩, 𝘺𝘵𝘷𝘪𝘥𝘦𝘰`;
       const coding = [{ title: "github", rowId: "rowid1" }];
       const economy = [
         { title: "bank", rowId: "rowid1" },
@@ -246,7 +277,7 @@ export default class Command extends BaseCommand {
       const button: any = {
         buttonText: "Command List",
         footerText: "© Celestial 2022",
-        description: `${text} 📝 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`,
+        description: `${text} 📝 *𝘕𝘰𝘵𝘦: 𝘜𝘴𝘦 ${this.client.config.prefix}𝘩𝘦𝘭𝘱 <command_name> 𝘵𝘰 𝘷𝘪𝘦𝘸 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 𝘪𝘯𝘧𝘰*`,
         sections: sections,
         listType: 1,
       };
