@@ -7,9 +7,9 @@ import { MessageType } from "@adiwajshing/baileys";
 export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
-      command: "deck",
+      command: "collection",
       description: "Shows your deck",
-      aliases: ["deck"],
+      aliases: ["collec"],
       category: "characters",
       usage: `${client.config.prefix}deck <index_number>`,
       baseXp: 30,
@@ -24,7 +24,7 @@ export default class Command extends BaseCommand {
     const user = M.sender.jid;
     const data = await (await this.client.getUser(user)).gallery;
     if (data.length < 1)
-      return void M.reply(`You don't have any character in your deck.`);
+      return void M.reply(`You don't have any character in your collection.`);
     const w: any = joined.trim().split(" ")[0];
     if (w > 0 && w <= data.length) {
       const i = w - 1;
@@ -37,7 +37,7 @@ export default class Command extends BaseCommand {
         text
       );
     } else {
-      let text = `🃏 Charas | ${M.sender.username} 🃏\n\n*🧧 Total Characters (In Deck) : ${data.length}*\n\n`;
+      let text = `🃏 Charas | ${M.sender.username} 🃏\n\n*🧧 Total Characters (In Collection) : ${data.length}*\n\n`;
       for (let i = 0; i < data.length; i++) {
         text += `❯ #${i + 1} - ${data[i].name} (From ${data[i].source})\n`;
       }
