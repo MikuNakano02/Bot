@@ -11,8 +11,8 @@ export default class Command extends BaseCommand {
     super(client, handler, {
       command: "play",
       description: "🎵 play a song with just search term!",
-      category: "media",
-      aliases: ["music"],
+      category: "music",
+      aliases: ["pl"],
       usage: `${client.config.prefix}play [term]`,
       baseXp: 30,
     });
@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
             body: `Author : ${videos[0].author.name.substr(
               0,
               20
-            )}\n🌟 Chitoge 🌟`,
+            )}\nCelestial`,
             mediaType: 2,
             thumbnail: await this.client.getBuffer(
               `https://i.ytimg.com/vi/${audio.id}/hqdefault.jpg`
