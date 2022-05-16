@@ -29,7 +29,6 @@ export default class Command extends BaseCommand {
 
     // M.reply('total user heuhue :'+indexes.toString())
     let message = ["*🪙 GOLD LEADERBOARD 🪙*\nUsers :" + indexes.toString() + ""];
-    let mention = [];
     let i = 0;
     for (const users of lb) {
       console.log(users.jid, "number");
