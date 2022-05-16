@@ -115,9 +115,9 @@ export default class Command extends BaseCommand {
       { $pull: { pokemons: data.tOffer.name } }
     );
     return void M.reply(
-      `🎊 *Trade Completed!* 🎊\n\n*${nAme}* -----> *@${
+      `🎊 *Trade Complete*\n\n🎗️ ${nAme} => @${
         data.startedBy.split("@")[0]
-      }*\n\n*${Name}* -----> *@${M.sender.jid.split("@")[0]}*`,
+      }\n🎗️ ${Name} => @${M.sender.jid.split("@")[0]}`,
       MessageType.text,
       undefined,
       [data.startedBy, M.sender.jid]
