@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
         }
       }
       let text =` *🌀Konichiwa!* @${user.split("@")[0]
-      }*, I'm *${this.client.user.name}*.\n\n𝘔𝘺 𝘱𝘳𝘦𝘧𝘪𝘹 𝘪𝘴 {this.client.config.prefix}
+      }, I'm *${this.client.user.name}*.\n\n𝘔𝘺 𝘱𝘳𝘦𝘧𝘪𝘹 𝘪𝘴 ${this.client.config.prefix}help
 
 𝘛𝘩𝘦 𝘶𝘴𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘣𝘦𝘭𝘰𝘸.
 
@@ -86,7 +86,7 @@ export default class Command extends BaseCommand {
  𝘭𝘺𝘳𝘪𝘤𝘴, 𝘥𝘰𝘸𝘯𝘭𝘰𝘢𝘥, 𝘴𝘱𝘰𝘵𝘪𝘧𝘺
 
 *━━━≪•◦𝘠𝘰𝘶𝘵𝘶𝘣𝘦◦•≫━━━*
- 𝘺𝘵𝘢𝘶𝘥𝘪𝘰, 𝘺𝘵𝘴𝘦𝘢𝘳𝘤𝘩, 𝘺𝘵𝘷𝘪𝘥𝘦𝘰`;
+ 𝘺𝘵𝘢𝘶𝘥𝘪𝘰, 𝘺𝘵𝘴𝘦𝘢𝘳𝘤𝘩, 𝘺𝘵𝘷𝘪𝘥𝘦𝘰 \n\n`;
       const coding = [{ title: "github", rowId: "rowid1" }];
       const economy = [
         { title: "bank", rowId: "rowid1" },
