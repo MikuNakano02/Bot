@@ -137,7 +137,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z === "win") {
-      const i = Math.floor(Math.random() * 6);
+      const i = Math.floor(Math.random() * 4);
       const gold = amount * i;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
