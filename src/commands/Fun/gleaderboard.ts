@@ -53,7 +53,8 @@ export default class Command extends BaseCommand {
     M.reply(
       await request.buffer("http://telegra.ph/file/b0311a8ea5e1ae5d3f594.jpg"),
       MessageType.image,
-      undefined, ")
+      undefined,
+      message.join("\n\n")
     );
   };
 }
