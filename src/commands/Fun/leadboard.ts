@@ -17,7 +17,8 @@ export default class Command extends BaseCommand {
       baseXp: 10,
     });
   }
-  run = async (M: ISimplifiedMessage): Promise<void> => {
+  
+run = async (M: ISimplifiedMessage): Promise<void> => {
     if (M.quoted?.sender) M.mentioned.push(M.quoted.sender);
     const user: any = M.mentioned[0] ? M.mentioned[0] : M.sender.jid;
     //  console.log(  await this.client.cookieStats(user))
@@ -43,7 +44,7 @@ export default class Command extends BaseCommand {
         ? this.client.contacts[users.jid].name
         : this.client.contacts[users.jid]
         ? this.client.contacts[users.jid].short
-        : `@${users.jid.split("@")[0]}`;
+        : `${users.jid.split[0]}`;
 
       const text = `*#${i}*\n*🧧 Username* : *${username}*\n*👛 Wallet* : *${users.wallet}*\n*🏦 Bank*: *${users.bank}*\n*🎖️ Exp*: *${users.Xp}*\n💻 *Pokemons: ${users.pokemons.length}*\n⭐ *Characters: ${users.gallery.length}*\n📊 *Quiz Points: ${users.quizPoints}*\n`;
       message.push(text);
