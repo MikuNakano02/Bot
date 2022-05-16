@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
         }
       }
       let text =` *🌀Konichiwa!* @${user.split("@")[0]
-      }, I'm *${this.client.user.name}*.\n\n𝘔𝘺 𝘱𝘳𝘦𝘧𝘪𝘹 𝘪𝘴 ${this.client.config.prefix}help
+      }, I'm *${this.client.user.name}*.\n\n𝘔𝘺 𝘱𝘳𝘦𝘧𝘪𝘹 𝘪𝘴 ${this.client.config.prefix}
 
 𝘛𝘩𝘦 𝘶𝘴𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘣𝘦𝘭𝘰𝘸.
 
