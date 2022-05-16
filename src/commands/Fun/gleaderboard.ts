@@ -29,9 +29,11 @@ export default class Command extends BaseCommand {
 
     // M.reply('total user heuhue :'+indexes.toString())
     let message = ["*🪙 GOLD LEADERBOARD 🪙*\nUsers :" + indexes.toString() + ""];
+    let mention = [];
     let i = 0;
     for (const users of lb) {
       console.log(users.jid, "number");
+      mention.push(users.jid);
       i++;
       console.log(i);
       const username = this.client.contacts[users.jid]
@@ -42,7 +44,7 @@ export default class Command extends BaseCommand {
         ? this.client.contacts[users.jid].name
         : this.client.contacts[users.jid]
         ? this.client.contacts[users.jid].short
-        : `@${users.jid.split("@")[0]}`;
+        : `${users.jid.split("@")[0]}`;
 
       let text = `*#${i}*\n*🧧 Username* : ${username}\n*👛 Wallet* : ${users.wallet}\n*🏦 Bank* : ${users.bank}\n*🎖️ Exp*: ${users.Xp}\n`;
       message.push(text);
