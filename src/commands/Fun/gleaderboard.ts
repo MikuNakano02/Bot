@@ -29,6 +29,7 @@ export default class Command extends BaseCommand {
 
     // M.reply('total user heuhue :'+indexes.toString())
     let message = ["*🪙 GOLD LEADERBOARD 🪙*\nUsers :" + indexes.toString() + ""];
+    let mention = [];
     let i = 0;
     for (const users of lb) {
       console.log(users.jid, "number");
@@ -53,6 +54,7 @@ export default class Command extends BaseCommand {
       await request.buffer("http://telegra.ph/file/b0311a8ea5e1ae5d3f594.jpg"),
       MessageType.image,
       undefined,
+      mention,
       message.join("\n\n")
     );
   };
