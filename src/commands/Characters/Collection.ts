@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
       description: "Shows your collection",
       aliases: ["collec"],
       category: "characters",
-      usage: `${client.config.prefix}deck <index_number>`,
+      usage: `${client.config.prefix}collec <index_number>`,
       baseXp: 30,
     });
   }
