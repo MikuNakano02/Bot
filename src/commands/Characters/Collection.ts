@@ -8,7 +8,7 @@ export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
       command: "collection",
-      description: "Shows your deck",
+      description: "Shows your collection",
       aliases: ["collec"],
       category: "characters",
       usage: `${client.config.prefix}deck <index_number>`,
