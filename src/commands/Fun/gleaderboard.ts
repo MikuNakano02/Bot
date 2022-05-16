@@ -43,7 +43,7 @@ export default class Command extends BaseCommand {
         ? this.client.contacts[users.jid].name
         : this.client.contacts[users.jid]
         ? this.client.contacts[users.jid].short
-        : `${users.jid.split("@")[0]}`;
+        : `@${users.jid.split("@")[0]}`;
 
       let text = `*#${i}*\n*🧧 Username* : ${username}\n*👛 Wallet* : ${users.wallet}\n*🏦 Bank* : ${users.bank}\n*🎖️ Exp*: ${users.Xp}\n`;
       message.push(text);
@@ -53,7 +53,7 @@ export default class Command extends BaseCommand {
       await request.buffer("http://telegra.ph/file/b0311a8ea5e1ae5d3f594.jpg"),
       MessageType.image,
       undefined,
-      mention,
+      undefined,
       message.join("\n\n")
     );
   };
