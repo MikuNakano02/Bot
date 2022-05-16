@@ -29,7 +29,6 @@ export default class Command extends BaseCommand {
 
     // M.reply('total user heuhue :'+indexes.toString())
     const message = ["*👑CELESTIAL GLOBAL LEADERBOARD👑*\nUsers :" + indexes.toString() + ""];
-    const mention = [];
     let i = 0;
     for (const users of lb) {
       console.log(users.jid, "number");
