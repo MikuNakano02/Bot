@@ -235,7 +235,7 @@ export default class MessageHandler {
         }
       );
       await this.client.sendMessage(Data.jids[p], buffer, MessageType.image, {
-        caption: `A wild pokemon appeared! Use ${this.client.config.prefix}catch to catch this pokemon.`,
+        caption: `A wild pokemon appeared! Use ${this.client.config.prefix}catch <pokemon name> to catch this pokemon.`,
       });
       setTimeout(async () => {
         await this.client.DB.group.updateOne(
