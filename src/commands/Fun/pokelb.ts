@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
     const user: any = M.mentioned[0] ? M.mentioned[0] : M.sender.jid;
     //  console.log(  await this.client.cookieStats(user))
     // await DB.user.findOne({user})
-    const lb = await this.client.DB.user.find().sort({ pokemons: -1 }).limit(10);
+    const lb = await this.client.DB.user.find().sort({ pokemons.length: -1 }).limit(10);
     const indexes = await this.client.DB.user.count();
     console.log(lb, indexes);
     //   M.reply(JSON.stringify(lb));
