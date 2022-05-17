@@ -98,6 +98,6 @@ export default class Command extends BaseCommand {
       return void M.reply(
         `🕕 Timed out! The correct answer was *${g.answer[1]}) ${g.answer[0]}.*`
       );
-    }, 60000);
+    }, 30000);
   };
 }
