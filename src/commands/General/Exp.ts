@@ -18,7 +18,7 @@ export default class Command extends BaseCommand {
   run = async (M: ISimplifiedMessage): Promise<void> => {
     if (M.quoted?.sender) M.mentioned.push(M.quoted.sender);
     const user = M.mentioned[0] ? M.mentioned[0] : M.sender.jid;
-    let username = user === M.sender.jid ? M.sender.username : "Your";
+    let username = user === M.sender.jid ? M.sender.username : "User";
     if (!username) {
       // const contact = this.client.getContact(user)
       // username = contact.notify || contact.vname || contact.name || user.split('@')[0]
