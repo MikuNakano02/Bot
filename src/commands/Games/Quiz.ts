@@ -48,12 +48,12 @@ export default class Command extends BaseCommand {
         `A quiz is already going on. Use *${this.client.config.prefix}quiz --ff* to forfeit this quiz.`
       );
     const quiz = await getRandomQuiz();
-    let text = `🎀 *Question: ${quiz.question}*\n\n`;
+    let text = `💎 *Question: ${quiz.question}*\n\n`;
     for (let i = 0; i < quiz.options.length; i++) {
       text += `*${i + 1}) ${quiz.options[i]}*\n`;
     }
     text += `\n🧧 *Use ${this.client.config.prefix}answer <option_number> to answer this question.*\n\n`;
-    text += `📒 *Note: You only have 60 seconds to answer.*`;
+    text += `📒 *Note: You only have 30 seconds to answer.*`;
     await this.client.DB.group.updateMany(
       { jid: M.from },
       {
@@ -98,6 +98,6 @@ export default class Command extends BaseCommand {
       return void M.reply(
         `🕕 Timed out! The correct answer was *${g.answer[1]}) ${g.answer[0]}.*`
       );
-    }, 90000);
+    }, 60000);
   };
 }
