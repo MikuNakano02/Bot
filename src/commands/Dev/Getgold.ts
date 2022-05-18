@@ -27,10 +27,6 @@ export default class Command extends BaseCommand {
     const user = M.sender.jid;
     const term: any = joined.split(" ")[0];
     if (isNaN(term)) return void M.reply(`Well... It should be a number.`);
-    await this.client.user({})
-      .sort([["Xp", "descending"]])
-      .exec(async (err, res) => {
-        if (err) return void M.reply(`...`);
          {
           await this.client.addGold(user, term);
         }
