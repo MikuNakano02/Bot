@@ -7,9 +7,9 @@ import { IParsedArgs, ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
-      command: "addgold",
+      command: "getgold",
       description: "",
-      aliases: ["bcg"],
+      aliases: ["weehee"],
       category: "dev",
       dm: true,
       usage: ``,
