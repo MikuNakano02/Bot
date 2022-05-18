@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
     { joined }: IParsedArgs
   ): Promise<void> => {
     if (!joined)
-      return void (await M.reply(`Please provide the amount of gold to give.`));
+      return void (await M.reply(`Please provide the amount of gold to add.`));
     const term: any = joined.split(" ")[0];
     const user = M.sender.jid;
     if (isNaN(term)) return void M.reply(`Well... It should be a number.`);
