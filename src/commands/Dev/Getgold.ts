@@ -24,17 +24,19 @@ export default class Command extends BaseCommand {
   ): Promise<void> => {
     if (!joined)
       return void (await M.reply(`Please provide the amount of gold to give.`));
-    const user = M.sender.jid;
     const term: any = joined.split(" ")[0];
+    const user = M.sender.jid;
     if (isNaN(term)) return void M.reply(`Well... It should be a number.`);
-        await this.client.DB.user
+    await this.client.DB.user
       .find({})
       .sort([["Xp", "descending"]])
-        {
+      .exec(async (err, res) => {
+        if (err) return void M.reply(`...`);
+        for (let i = 0; i < res.length; i++) {
           await this.client.addGold(user, term);
         }
         return void M.reply(
-          `🟩 *Added ${term} gold to wallet.*`
+          `🟩 *Added ${term} gold to ${res.length} users wallet.*`
         );
       });
   };
