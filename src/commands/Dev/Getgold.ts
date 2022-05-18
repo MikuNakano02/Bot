@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
     const term: any = joined.split(" ")[0];
     const user = M.sender.jid;
     if (isNaN(term)) return void M.reply(`Well... It should be a number.`);
-    await this.client.user
+  await this.client.DB.user
       .exec(async (err, res) => {
         if (err) return void M.reply(`...`);
         for (let i = 0; i < res.length; i++) {
