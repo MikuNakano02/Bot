@@ -24,8 +24,8 @@ export default class Command extends BaseCommand {
     const term: any = joined.split(" ")[0]; 
     const user = M.sender.jid;
     }
+  {  {
     await this.client.addGold(user, term);
     }
     return void M.reply(`🎉Added ${term} gold to wallet.`);
-  };
 }
