@@ -58,9 +58,9 @@ export default class Command extends BaseCommand {
       role = "💎 Supreme";
     } else if (exp < 125000) {
       role = "👻 Ghost";
-    } else if (exp < 150000) {
+    } else if (exp < 200000) {
       role = "🧚 Fairy";
-    } else if (exp < 175000) {
+    } else if (exp < 500000) {
       role = "🎃 Pumpkin";
     } else {
       role = "❄️ DEMON KING";
@@ -85,13 +85,13 @@ export default class Command extends BaseCommand {
       level = 8;
     } else if (exp < 100000) {
       level = 9;
-    } else if (exp < 125000) {
-      level = 10;
     } else if (exp < 150000) {
-      level = 11;
+      level = 10;
     } else if (exp < 175000) {
-      level = 12;
+      level = 11;
     } else if (exp < 200000) {
+      level = 12;
+    } else if (exp < 300000) {
       level = 13;
     } else {
       level = 14;
