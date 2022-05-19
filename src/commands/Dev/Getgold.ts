@@ -34,7 +34,7 @@ export default class Command extends BaseCommand {
           await this.client.addGold(user, term);
         }
         return void M.reply(
-          `🟩 *Added ${term} gold to ${res.length} users wallet.*`
+          `🟩 *Added ${term} gold to wallet.*`
         );
       });
   };
