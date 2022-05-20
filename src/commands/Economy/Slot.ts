@@ -54,26 +54,6 @@ export default class Command extends BaseCommand {
     const p = jack[Math.floor(Math.random() * jack.length)];
     const results = [
       "lose",
-      "win",
-      "lose",
-      "lose",
-      "lose",
-      "win",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "lose",
-      "win",
-      "lose",
-      "lose",
-      "win",
-      "lose",
       "lose",
       "lose",
       "lose",
@@ -82,9 +62,29 @@ export default class Command extends BaseCommand {
       "lose",
       "lose",
       "lose",
-      "win",
+      "lose",
+      "lose",
+      "lose",
+      "lose",
+      "lose",
+      "lose",
       "lose",
       "win",
+      "lose",
+      "lose",
+      "win",
+      "lose",
+      "lose",
+      "lose",
+      "lose",
+      "lose",
+      "win",
+      "lose",
+      "lose",
+      "lose",
+      "win",
+      "lose",
+      "lose",
       "lose",
       "lose",
       "lose",
@@ -137,7 +137,7 @@ export default class Command extends BaseCommand {
       await M.reply(buttonMessage, MessageType.buttonsMessage);
     }
     if (z === "win") {
-      const i = Math.floor(Math.random() * 5);
+      const i = Math.floor(Math.random() * 6);
       const gold = amount * i;
       await this.client.addGold(user, gold);
       await this.client.DB.cd.updateOne(
