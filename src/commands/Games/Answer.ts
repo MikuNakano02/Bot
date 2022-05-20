@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
     const id = await (await this.client.getGroupData(M.from)).quizResponse.id;
     const check = await (await this.client.getUser(M.sender.jid)).lastQuizId;
     const exp = Math.floor(Math.random() * 100);
-    const gold = Math.floor(Math.random() * (1350 - 120) + 100);
+    const gold = Math.floor(Math.random() * (1050 - 120) + 100);
     if (id === check) {
       return void M.reply(
         `You have recently attempted to answer this question, give it a break.`
