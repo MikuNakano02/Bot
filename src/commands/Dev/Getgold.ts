@@ -1,4 +1,3 @@
-
 import { MessageType } from "@adiwajshing/baileys";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
@@ -19,23 +18,23 @@ export default class Command extends BaseCommand {
     });
   }
 
-    run = async (
+  run = async (
     M: ISimplifiedMessage,
     { joined }: IParsedArgs
   ): Promise<void> => {
     if (!joined)
-      return void (await M.reply(`Please provide the amount of gold to give.`));
+      return void (await M.reply(`Please provide the amount of gold to add.`));
+    const term: any = joined.split(" ")[0];
     const user = M.sender.jid;
-    const term: any = joined.split(" ")[0];  
     if (isNaN(term)) return void M.reply(`Well... It should be a number.`);
-    await this.client.DB.user
-      .find({})
-      .sort([["Xp", "descending"]])
-      {
+  await this.client.DB.user
+      .exec(async (err, res) => {
+        if (err) return void M.reply(`...`);
+        for (let i = 0; i < res.length; i++) {
           await this.client.addGold(user, term);
         }
         return void M.reply(
-          `🟩 *Added ${term} gold wallet.*`
+          `🟩 *Added ${term} gold to ${res.length} users wallet.*`
         );
       });
   };
