@@ -42,10 +42,10 @@ export default class Command extends BaseCommand {
     const direction = directions[Math.floor(Math.random() * directions.length)];
     let gif!: string;
     if (direction === "left") {
-      gif = "https://bestanimations.com/media/left/365059883left-arrow-18.gif";
+      gif = "https://bestanimations.com/media/left/1229743899left-arrow-17.gif";
     } else if (direction === "right") {
       gif =
-        "https://p14cdn4static.sharpschool.com/UserFiles/Servers/Server_1584893/Image/Buttons/right-arrow-31.gif";
+        "https://bestanimations.com/media/right/689323598right-arrow31.gif";
     }
     const buttons = [
       {
