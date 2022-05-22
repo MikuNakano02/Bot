@@ -141,9 +141,9 @@ export default class EventHandler {
         welcome.toBuffer(),
         MessageType.image,
         {
-          caption: `- ${group.subject || "___"} -\n\n💠 *Group Description:*\n${
+          caption: `- ${group.subject || "___"} -\n\n🧧 Description:*\n${
             group.desc
-          }\n\nHope you follow the rules and have fun!\n\n*‣ ${event.participants
+          }\n\nFollow the rules and have fun!\n\n*⪧ ${event.participants
             .map((jid) => `@${jid.split("@")[0]}`)
             .join(", ")}*`,
           contextInfo,
